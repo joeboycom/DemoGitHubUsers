@@ -63,11 +63,11 @@ public class GetUserListLoader extends AsyncTaskLoader<GetUserListApiResponse>
             Call<List<UserList>> call = null;
             if (TextUtils.isEmpty(mNextPageLink))
             {
-                call = mService.getUserListAPI(mSince, mPageSize);
+                call = mService.getUserListAPI(mSince, mPageSize, APIUtility.CLIENT_ID, APIUtility.CLIENT_SECRET);
             }
             else
             {
-                call = mService.getUserListAPI(mNextPageLink);
+                call = mService.getUserListAPI(mNextPageLink, APIUtility.CLIENT_ID, APIUtility.CLIENT_SECRET);
             }
 
             Response<List<UserList>> response = call.execute();

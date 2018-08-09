@@ -23,7 +23,9 @@ import retrofit2.http.Url;
 
 public interface APIUtility
 {
-    String BASE_URL = "https://api.github.com/";
+    String BASE_URL         = "https://api.github.com/";
+    String CLIENT_ID        = "baf44fa09d5c2bda1871";
+    String CLIENT_SECRET    = "d649cb8a14b4ccc7185f31d6f132494745bbce12";
 
     OkHttpClient.Builder httpClient = BuildConfig.DEBUG ?
             new OkHttpClient.Builder().addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
@@ -40,11 +42,11 @@ public interface APIUtility
 // users
 // ==================================================================================
     @GET("users")
-    Call<List<UserList>> getUserListAPI(@Query("since") String since, @Query("per_page") String per_page);
+    Call<List<UserList>> getUserListAPI(@Query("since") String since, @Query("per_page") String per_page, @Query("client_id") String client_id, @Query("client_secret") String client_secret);
 
     @GET
-    Call<List<UserList>> getUserListAPI(@Url String url);
+    Call<List<UserList>> getUserListAPI(@Url String url, @Query("client_id") String client_id, @Query("client_secret") String client_secret);
 
     @GET("users/{login}")
-    Call<GetUserDetailApiResponse> getUserDetailAPI(@Path("login") String login);
+    Call<GetUserDetailApiResponse> getUserDetailAPI(@Path("login") String login, @Query("client_id") String client_id, @Query("client_secret") String client_secret);
 }

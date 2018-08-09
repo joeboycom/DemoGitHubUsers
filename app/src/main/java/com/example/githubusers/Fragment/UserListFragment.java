@@ -35,7 +35,7 @@ public class UserListFragment extends RecyclerViewFragment implements RecyclerVi
     private static final String TAG = UserListFragment.class.getSimpleName();
 
     private String mNextPageLink    = "";
-    private String mDefaultPageSize = "10";
+    private String mDefaultPageSize = "20";
 
     private boolean mIsLoading       = false;
     private View    mEndlessProgress = null;              // show on list bottom when no data

@@ -49,7 +49,7 @@ public class GetUserDetailAPI extends AsyncTask<String, Integer, GetUserDetailAp
 
         try
         {
-            Call<GetUserDetailApiResponse> call = mService.getUserDetailAPI(mLogin);
+            Call<GetUserDetailApiResponse> call = mService.getUserDetailAPI(mLogin, APIUtility.CLIENT_ID, APIUtility.CLIENT_SECRET);
 
             Response<GetUserDetailApiResponse> response = call.execute();
             mStatusCode = response.code();

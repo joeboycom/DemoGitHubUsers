@@ -1,12 +1,15 @@
 package com.example.githubusers.Fragment;
 
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +20,7 @@ import com.example.githubusers.MainActivity;
 import com.example.githubusers.ParameterKey;
 import com.example.githubusers.R;
 import com.example.githubusers.Utility.GlideUtility;
+import com.example.githubusers.Utility.ResourceUtility;
 
 /**
  * User detail page
@@ -29,6 +33,7 @@ public class UserDetailFragment extends BaseFragment
     private String mstrLogin                = "";
     private String mstrBlogURL              = "";
     private ImageView mCancelImageView      = null;
+    private CardView mUserPhotoCardView     = null;
     private ImageView mUserLoginImageView   = null;
     private ImageView mUserPhotoImageView   = null;
     private ImageView mUserLocationImageView= null;
@@ -64,6 +69,12 @@ public class UserDetailFragment extends BaseFragment
             }
         });
 
+        mUserPhotoCardView      = (CardView) rootView.findViewById(R.id.mUserPhotoCardView);
+        float size = ResourceUtility.getScreenWidth(this)/3;
+        mUserPhotoCardView.setRadius(size/2);
+        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams((int)size, (int)size);
+        llp.gravity = Gravity.CENTER_HORIZONTAL;
+        mUserPhotoCardView.setLayoutParams(llp);
 
         mUserPhotoImageView     = (ImageView) rootView.findViewById(R.id.mUserPhotoImageView);
         mUserLoginImageView     = (ImageView) rootView.findViewById(R.id.mUserLoginImageView);
@@ -111,7 +122,11 @@ public class UserDetailFragment extends BaseFragment
                 mstrBlogURL = getUserDetailApiResponse.blog;
                 GlideUtility.useGlide(getActivity(), getUserDetailApiResponse.avatar_url, mUserPhotoImageView, R.drawable.default_avatar, R.drawable.default_avatar);
                 mUserNameTextView.setText(getUserDetailApiResponse.name);
-                mUserBioTextView.setText(getUserDetailApiResponse.bio);
+                if (!TextUtils.isEmpty(getUserDetailApiResponse.bio))
+                {
+                    mUserBioTextView.setText(getUserDetailApiResponse.bio);
+                    mUserBioTextView.setVisibility(View.VISIBLE);
+                }
                 if (!TextUtils.isEmpty(getUserDetailApiResponse.login))
                 {
                     mUserLoginImageView.setVisibility(View.VISIBLE);
