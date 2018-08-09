@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="one_dp">1dp</dimen>
+    <dimen name="corner_radius">8dp</dimen>
+    <dimen name="tab_max_width">8dp</dimen>
+    <dimen name="control_btn_space">16dp</dimen>
+    <dimen name="text_size_empty_data">13sp</dimen>
+    <dimen name="margin_dp">20dp</dimen>
+
+    <dimen name="toolbar_inset_padding">0dp</dimen>
+    <dimen name="toolbar_icon_size">56dp</dimen>
+    <dimen name="toolbar_text_size">16sp</dimen>
+    <dimen name="toolbar_elevation">3dp</dimen>
+    <dimen name="toolbar_text_margin">16dp</dimen>
+
+</resources>  

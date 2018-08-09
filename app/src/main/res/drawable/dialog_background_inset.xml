@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- drawable is a reference to your 'real' dialog background -->
+<!-- insetRight and insetLeft add the margins -->
+<inset
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/shape_rounded_corner_with_white_background"
+    android:insetRight="@dimen/control_btn_space"
+    android:insetLeft="@dimen/control_btn_space"
+    android:insetTop="@dimen/control_btn_space"
+    android:insetBottom="@dimen/control_btn_space">
+</inset>

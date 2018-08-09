@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/mWebViewCoordinatorLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/mWebViewAppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/mToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:contentInsetEnd="@dimen/toolbar_inset_padding"
+                android:contentInsetLeft="@dimen/toolbar_inset_padding"
+                android:contentInsetRight="@dimen/toolbar_inset_padding"
+                android:contentInsetStart="@dimen/toolbar_inset_padding"
+                app:contentInsetEnd="@dimen/toolbar_inset_padding"
+                app:contentInsetLeft="@dimen/toolbar_inset_padding"
+                app:contentInsetRight="@dimen/toolbar_inset_padding"
+                app:contentInsetStart="@dimen/toolbar_inset_padding"
+                app:theme="@style/ActionBar">
+
+                <RelativeLayout
+                    android:id="@+id/mContentToolbarRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize">
+
+                    <ImageView
+                        android:id="@+id/mToolbarBackButtonImageView"
+                        android:layout_width="@dimen/toolbar_icon_size"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/toolbar_text_margin"
+                        android:paddingRight="@dimen/toolbar_text_margin"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_back"/>
+
+                    <ImageView
+                        android:id="@+id/mToolbarExitButtonImageView"
+                        android:layout_width="@dimen/toolbar_icon_size"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/toolbar_text_margin"
+                        android:paddingRight="@dimen/toolbar_text_margin"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/selector_button_cancel"/>
+
+                    <TextView
+                        android:id="@+id/mToolbarTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/toolbar_inset_padding"
+                        android:layout_marginRight="@dimen/toolbar_inset_padding"
+                        android:layout_toLeftOf="@id/mToolbarExitButtonImageView"
+                        android:layout_toRightOf="@id/mToolbarBackButtonImageView"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/toolbar_text_size"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <WebView
+            android:id="@+id/mWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <RelativeLayout
+            android:id="@+id/loadingCircle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/white">
+
+            <ProgressBar
+                style="@style/progressBarStyle"/>
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GitHub Users</string>
+    <string name="loading">Loading</string>
+    <string name="header_user_list">Users</string>
+    <string name="api_fail">Internet Error</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="msg_exit_app">Are you sure want to exit the application?</string>
+
+</resources>
