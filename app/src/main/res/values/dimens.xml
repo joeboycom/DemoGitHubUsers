@@ -8,7 +8,8 @@
     <dimen name="margin_dp">20dp</dimen>
 
     <dimen name="toolbar_inset_padding">0dp</dimen>
-    <dimen name="toolbar_icon_size">46dp</dimen>
+    <dimen name="toolbar_exit_icon_size">46dp</dimen>
+    <dimen name="toolbar_back_icon_size">56dp</dimen>
     <dimen name="toolbar_text_size">16sp</dimen>
     <dimen name="toolbar_elevation">3dp</dimen>
     <dimen name="toolbar_text_margin">16dp</dimen>

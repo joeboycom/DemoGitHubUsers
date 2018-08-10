@@ -84,7 +84,7 @@ public class UserListFragment extends RecyclerViewFragment implements RecyclerVi
                 Log.e(TAG, "onLoadFinished");
                 try
                 {
-                    if (restResponse.nextPageLink.equals("-1"))
+                    if (restResponse.nextPageLink.equals("-1") || restResponse.nextPageLink.equals(mNextPageLink))
                     {
                         setRecyclerViewShown(true);
                         onLoadMoreDataFinished();

@@ -9,24 +9,15 @@ import android.os.Parcelable;
 
 public class UserList implements Parcelable
 {
+    private String id;
     private String login;
     private String avatar_url;
     private boolean site_admin;
 
-    public String getLogin()
-    {
-        return login;
-    }
-
-    public String getAvatarUrl()
-    {
-        return avatar_url;
-    }
-
-    public boolean isSiteAdmin()
-    {
-        return site_admin;
-    }
+    public String getId()        {return id;}
+    public String getLogin()     {return login;}
+    public String getAvatarUrl() {return avatar_url;}
+    public boolean isSiteAdmin() {return site_admin;}
 
     public int current_page;
 

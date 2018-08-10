@@ -116,7 +116,6 @@ public abstract class RecyclerViewBaseAdapter<VH extends RecyclerView.ViewHolder
 		if (getHeaderViewHolder() != null)
 		{
 			position = position - 1;
-			Log.e(TAG, "offsetHeaderPosition position: " + position);
 		}
 
 		return position;

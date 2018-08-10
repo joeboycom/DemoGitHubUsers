@@ -40,7 +40,7 @@
 
                     <ImageView
                         android:id="@+id/mToolbarBackButtonImageView"
-                        android:layout_width="@dimen/toolbar_icon_size"
+                        android:layout_width="@dimen/toolbar_back_icon_size"
                         android:layout_height="match_parent"
                         android:layout_centerVertical="true"
                         android:paddingLeft="@dimen/toolbar_text_margin"
@@ -50,7 +50,7 @@
 
                     <ImageView
                         android:id="@+id/mToolbarExitButtonImageView"
-                        android:layout_width="@dimen/toolbar_icon_size"
+                        android:layout_width="@dimen/toolbar_exit_icon_size"
                         android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"

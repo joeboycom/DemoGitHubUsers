@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 public class UserListRVLAdapter extends RecyclerViewListAdapter
 {
+    private static final String TAG = UserListRVLAdapter.class.getSimpleName();
+
     private View.OnClickListener mOnClickListener = null;
 
     public UserListRVLAdapter(Context context, ArrayList<UserList> list, View.OnClickListener listener)
